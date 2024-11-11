@@ -1,0 +1,515 @@
+// src/data/scooterData.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const ScooterData = [
+    {
+      company: 'Ather',
+        name: 'Ather 450S',
+        images: ['/images/ather/atherS1.webp', '/images/ather/atherS2.webp'],
+        price: '₹ 1,15,599',
+        batteryLife: '115 km per charge',
+        topSpeed: '90 kmph',
+        chargingTime: '8.36 hrs',
+        variants: '4',
+        website: 'https://www.atherenergy.com/450X'
+    },
+    {
+      company: 'Ather',
+      name: 'Rizta',
+      images: ['/images/ather/rizda1.webp', '/images/ather/rizda2.webp'],
+      price: ' ₹ 1,09,999',
+      batteryLife: '123 km per charge',
+      topSpeed: '80 kmph',
+      chargingTime: '8.3 hrs',
+      variants: '6',
+      website: 'https://www.atherenergy.com/rizta'
+    },
+    {
+        company: 'Ampere',
+        name: 'Magnus LT',
+        images: ['/images/ampere/lt1.webp', '/images/ampere/lt2.webp'],
+        price: '₹  88,623',
+        batteryLife: '80 km per charge',
+        topSpeed: '45 kmph',
+        chargingTime: '6 hrs',
+        variants: '2',
+        website: 'https://ampere.greaveselectricmobility.com/magnus'
+      },
+      {
+        company: 'Ampere',
+        name: 'Magnus EX',
+        images: ['/images/ampere/ex1.webp', '/images/ampere/ex2.webp'],
+        price: '₹  93,874',
+        batteryLife: '121 km per charge',
+        topSpeed: '45 kmph',
+        chargingTime: '6 hrs',
+        variants: '2',
+        website: 'https://ampere.greaveselectricmobility.com/magnus'
+      },
+      {
+        company: 'Ampere',
+        name: 'Nexus EX',
+        images: ['/images/ampere/nexus1.webp', '/images/ampere/nexus2.webp'],
+        price: '₹ 1,20,935',
+        batteryLife: '136 km per charge',
+        topSpeed: '93 kmph',
+        chargingTime: '3.3 hrs',
+        variants: '2',
+        website: 'https://ampere.greaveselectricmobility.com/nexus-home'
+      },
+      {
+        company: 'Ampere',
+        name: 'Primus',
+        images: ['/images/ampere/primus1.webp', '/images/ampere/primus2.webp'],
+        price: '₹ 1,33,840',
+        batteryLife: '107 km per charge',
+        topSpeed: '77 kmph',
+        chargingTime: '5 hrs',
+        variants: '1',
+        website: 'https://ampere.greaveselectricmobility.com/primus'
+      },
+      {
+        company: 'Ampere',
+        name: 'Reo Li Plus',
+        images: ['/images/ampere/reo1.webp', '/images/ampere/reo2.webp'],
+        price: '₹ 66,120',
+        batteryLife: '70 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '6 hrs',
+        variants: '1',
+        website: 'https://ampere.greaveselectricmobility.com/reo-plus'
+      },
+      {
+        company: 'Ampere',
+        name: 'Zeal',
+        images: ['/images/ampere/zeal1.webp', '/images/ampere/zeal2.webp'],
+        price: '₹ 95,754',
+        batteryLife: '120 km per charge',
+        topSpeed: '53 kmph',
+        chargingTime: '7 hrs',
+        variants: '1',
+        website: 'https://ampere.greaveselectricmobility.com/zeal-ex'
+      },
+      {
+        company: 'BattRE',
+        name: 'LOEV',
+        images: ['/images/batt/loev1.png', '/images/batt/loev2.png'],
+        price: '₹ 59,900',
+        batteryLife: '60-180 km per charge',
+        topSpeed: '49 kmph',
+        chargingTime: '2.5 hrs',
+        variants: '1',
+        website: 'https://battre.in/models/loev/'
+      },
+      {
+        company: 'BattRE',
+        name: 'One',
+        images: ['/images/batt/one1.jpg', '/images/batt/one2.webp'],
+        price: '₹ 73,900',
+        batteryLife: '60-150 km per charge',
+        topSpeed: '85 kmph',
+        chargingTime: '2.5 hrs',
+        variants: '1',
+        website: 'https://battre.in/models/one/'
+      },
+      {
+        company: 'EeVe',
+        name: 'Ahava',
+        images: ['/images/EeVe/ahava1.jpeg', '/images/EeVe/ahava2.webp'],
+        price: '₹ 62,499',
+        batteryLife: '68 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '6.5 hrs',
+        variants: '1',
+        website: 'https://eeveindia.com/ahava.php'
+      },
+      {
+        company: 'EeVe',
+        name: 'Atreo',
+        images: ['/images/EeVe/atreo1.webp', '/images/EeVe/atreo2.webp'],
+        price: '₹ 68,999',
+        batteryLife: '80 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '6–7 hrs',
+        variants: '2',
+        website: 'https://eeveindia.com/atreo.php'
+      },
+      {
+        company: 'EeVe',
+        name: 'Xeniaa',
+        images: ['/images/EeVe/xeniaa1.jpg', '/images/EeVe/xeniaa2.webp'],
+        price: '₹ 68,999',
+        batteryLife: '80 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '3.5 hrs',
+        variants: '2',
+        website: 'https://eeveindia.com/xeniaa.php'
+      },
+      {
+        company: 'Hero',
+        name: 'Flash LX',
+        images: ['/images/hero/flash1.webp', '/images/hero/flash2.webp'],
+        price: '₹ 64,269',
+        batteryLife: '85 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '4-5 hrs',
+        variants: '2',
+        website: 'https://heroelectric.in/bike/flash-lx/'
+      },
+      {
+        company: 'Hero',
+        name: 'Photon LP',
+        images: ['/images/hero/photon1.webp', '/images/hero/photon2.webp'],
+        price: '₹ 1,10,891',
+        batteryLife: '90 km per charge',
+        topSpeed: '45 kmph',
+        chargingTime: '5 hrs',
+        variants: '2',
+        website: 'https://heroelectric.in/bikes/?variant=cx&model=photon-lp-series'
+      },
+      {
+        company: 'Hero',
+        name: 'Optima CX',
+        images: ['/images/hero/optima1.webp', '/images/hero/optima2.webp'],
+        price: '₹ 83,300',
+        batteryLife: '89 km per charge',
+        topSpeed: '48 kmph',
+        chargingTime: '4.5 hrs',
+        variants: '2',
+        website: 'https://heroelectric.in/bike/optima-2-0/'
+      },
+      {
+        company: 'Joy',
+        name: 'e-bike Mihos',
+        images: ['/images/joy/mihos1.webp', '/images/joy/mihos2.webp'],
+        price: '₹ 1,26,748',
+        batteryLife: '135 km per charge',
+        topSpeed: '65 kmph',
+        chargingTime: '5 hrs',
+        variants: '1',
+        website: 'https://joyebike.com/mihos/'
+      },
+      {
+        company: 'Joy',
+        name: 'e-bike Gen Next Nanu',
+        images: ['/images/joy/nxt1.webp', '/images/joy/nxt2.webp'],
+        price: '₹ 81,441',
+        batteryLife: '90 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '5 hrs',
+        variants: '3',
+        website: 'https://www.joyebike.com/gen-next+/'
+      },
+      {
+        company: 'Joy',
+        name: 'e-bike Glob',
+        images: ['/images/joy/glob1.webp', '/images/joy/glob2.png'],
+        price: '₹ 73,051',
+        batteryLife: '60 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '5 hrs',
+        variants: '1',
+        website: 'https://www.joyebike.com/product/glob-bike/'
+      },
+      {
+        company: 'Okinawa',
+        name: 'iPrase+',
+        images: ['/images/okinava/iprase1.webp', '/images/okinava/iprase2.webp'],
+        price: '₹ 1,22,955',
+        batteryLife: '137 km per charge',
+        topSpeed: '56 kmph',
+        chargingTime: '4-5 hrs',
+        variants: '1',
+        website: 'https://okinawascooters.com/scooters/ipraise-plus'
+      },
+      {
+        company: 'Okinawa',
+        name: 'okhi-90',
+        images: ['/images/okinava/okhi901.webp', '/images/okinava/okhi902.webp'],
+        price: '₹ 2,00,858',
+        batteryLife: '161 km per charge',
+        topSpeed: '90 kmph',
+        chargingTime: '5-6 hrs',
+        variants: '1',
+        website: 'https://okinawascooters.com/scooters/okhi-90'
+      },
+      {
+        company: 'Okinava',
+        name: 'Ridge+',
+        images: ['/images/okinava/ridge+1.webp', '/images/okinava/ridge+2.webp'],
+        price: '₹ 99,866',
+        batteryLife: '84 km per charge',
+        topSpeed: '45 kmph',
+        chargingTime: '2-3 hrs',
+        variants: '2',
+        website: 'https://okinawascooters.com/scooters/ridge-plus'
+      },
+      {
+        company: 'Okaya',
+        name: 'ClassiQ',
+        images: ['/images/okaya/classiq1.webp', '/images/okaya/classiq2.webp'],
+        price: '₹ 81,451',
+        batteryLife: '70 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '4-5 hrs',
+        variants: '1',
+        website: 'https://okayaev.com/e-scooters/CLASSIQ'
+      },
+      {
+        company: 'Okaya',
+        name: 'Freedum',
+        images: ['/images/okaya/freedum1.webp', '/images/okaya/frredum2.webp'],
+        price: '₹  81,872',
+        batteryLife: '75 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '5-6 hrs',
+        variants: '1',
+        website: 'https://okayaev.com/e-scooters/FREEDUM'
+      },
+      {
+        company: 'Ola',
+        name: 'Roadster',
+        images: ['/images/ola/roadster1.webp', '/images/ola/roadster2.webp'],
+        price: '₹ 1,08,115',
+        batteryLife: '151 km per charge',
+        topSpeed: '116 kmph',
+        chargingTime: '7.9 hrs',
+        variants: '3',
+        website: 'https://www.olaelectric.com/motorcycles/roadster'
+      },
+      {
+        company: 'Ola',
+        name: 'S1',
+        images: ['/images/ola/s11.webp', '/images/ola/s12.webp'],
+        price: '₹ 86,719',
+        batteryLife: '95 km per charge',
+        topSpeed: '85 kmph',
+        chargingTime: '5 hrs',
+        variants: '4',
+        website: 'https://www.olaelectric.com/s1-x'
+      },
+      {
+        company: 'Pure EV',
+        name: 'ETrance Neo',
+        images: ['/images/pure/etrance1.webp', '/images/pure/etrance2.webp'],
+        price: '₹ 82,426',
+        batteryLife: '101 km per charge',
+        topSpeed: '47 kmph',
+        chargingTime: '4 hrs',
+        variants: '3',
+        website: 'https://www.pureev.in/etrance-neo'
+      },
+      {
+        company: 'Pure EV',
+        name: 'EPluto 7G',
+        images: ['/images/pure/pluto1.webp', '/images/pure/pluto2.webp'],
+        price: '₹ 86,627',
+        batteryLife: '101 km per charge',
+        topSpeed: '47 kmph',
+        chargingTime: '4 hrs',
+        variants: '4',
+        website: 'https://www.pureev.in/epluto'
+      },
+      {
+        company: 'TVS',
+        name: 'X Smart',
+        images: ['/images/tvs/smart1.webp', '/images/tvs/smart2.webp'],
+        price: '₹ 2,49,990',
+        batteryLife: '140 km per charge',
+        topSpeed: '105 kmph',
+        chargingTime: '4 hrs',
+        variants: '1',
+        website: 'https://www.tvsmotor.com/electric-vehicle/tvs-x'
+      },
+      {
+        company: 'TVS',
+        name: 'iQube',
+        images: ['/images/tvs/iQube1.webp', '/images/tvs/iQUbe2.webp'],
+        price: '₹ 1,22,000',
+        batteryLife: '75 km per charge',
+        topSpeed: '75 kmph',
+        chargingTime: '6.2 hrs',
+        variants: '5',
+        website: 'https://www.tvsmotor.com/electric-vehicle/tvs-iqube'
+      },
+      {
+        company: 'Bajaj',
+        name: 'Chetak',
+        images: ['/images/bajaj/chetak1.webp', '/images/bajaj/chetak2.webp'],
+        price: '₹ 1,05,824',
+        batteryLife: '123 km per charge',
+        topSpeed: '63 kmph',
+        chargingTime: '6 hrs',
+        variants: '7',
+        website: 'https://www.chetak.com/'
+      },
+      {
+        company: 'Hala',
+        name: 'Hala',
+        images: ['/images/hala/hala1.webp', '/images/hala/hala2.png'],
+        price: '₹ 1,30,630',
+        batteryLife: '143 km per charge',
+        topSpeed: '80 kmph',
+        chargingTime: '4-6 hrs',
+        variants: '2',
+        website: 'https://halamobility.in/#hero'
+      },
+      {
+        company: 'Oben Electric',
+        name: 'Oben rorr',
+        images: ['/images/obenRorr/rorr1.webp', '/images/obenRorr/rorr2.webp'],
+        price: '₹ 1,30,630',
+        batteryLife: '143 km per charge',
+        topSpeed: '80 kmph',
+        chargingTime: '7 hrs',
+        variants: '1',
+        website: 'https://obenelectric.com/'
+      },
+      {
+        company: 'Revolt Motors',
+        name: 'Revolt RV400',
+        images: ['/images/revolt/revolt1.webp', '/images/revolt/revolt2.webp'],
+        price: '₹ 1,30,630',
+        batteryLife: '143 km per charge',
+        topSpeed: '80 kmph',
+        chargingTime: '4.5 hrs',
+        variants: '2',
+        website: 'https://www.revoltmotors.com/rv400?gad_source=1&gclid=CjwKCAiAxKy5BhBbEiwAYiW--6FZYcE6d3-6hD64hYQ4gzrolhB2MXD97pxuaI-jT29SgJKMoTI49RoCAggQAvD_BwE'
+      },
+      {
+        company: 'Simple Energy',
+        name: 'Simple Energy One',
+        images: ['/images/simple/simple1.webp', '/images/simple/simple2.webp'],
+        price: '₹  1,66,142',
+        batteryLife: '212 km per charge',
+        topSpeed: '105 kmph',
+        chargingTime: '4 hrs',
+        variants: '1',
+        website: 'https://simpleenergy.in/products/simpleone#meet-one'
+      },
+      {
+        company: 'Vida',
+        name: 'V1',
+        images: ['/images/vida/v11.webp', '/images/vida/v12.webp'],
+        price: '₹ 1,30,630',
+        batteryLife: '143 km per charge',
+        topSpeed: '80 kmph',
+        chargingTime: '1.5 hrs',
+        variants: '2',
+        website: 'https://www.vidaworld.com/products.html'
+      },
+      {
+        company: 'Komaki',
+        name: 'Komaki CAT 2.0',
+        images: ['/images/komaki/cat1.png', '/images/komaki/cat2.jpg'],
+        price: '₹ 1,18,560',
+        batteryLife: '120 km per charge',
+        topSpeed: '70 kmph',
+        chargingTime: '4-5 hrs',
+        variants: '2',
+        website: 'https://shop.komaki.in/product/komaki-cat-2-0-nxt-hi-speed-electric-scooter-ev-scooter-brown-70-km-h-range-110-km-to-140-km-per-charge/'
+      },
+      {
+        company: 'Komaki',
+        name: 'Komaki Flora',
+        images: ['/images/komaki/flora1.png', '/images/komaki/flora2.jpg'],
+        price: '₹ 65,200',
+        batteryLife: '80-100 km per charge',
+        topSpeed: '55 km',
+        chargingTime: '4-5 hrs',
+        variants: '2',
+        website: 'https://www.vidaworld.com/products.html'
+      },
+      {
+        company: 'Komaki',
+        name: 'Komaki Ranger',
+        images: ['/images/komaki/ranger1.jpg', '/images/komaki/ranger2.jpg'],
+        price: '₹ 1,75,232',
+        batteryLife: '210 km per charge',
+        topSpeed: '80 kmph',
+        chargingTime: '4-5 hrs',
+        variants: '1',
+        website: 'https://komaki.in/ranger-electric-bike/'
+      },
+      {
+        company: 'Komaki',
+        name: 'Komaki TN-95',
+        images: ['/images/komaki/tn1.jpg', '/images/komaki/tn2.jpg'],
+        price: '₹ 1,23,968',
+        batteryLife: '130 - 150 km per charge',
+        topSpeed: '85 kmph',
+        chargingTime: '4-5 hrs',
+        variants: '2',
+        website: 'https://komaki.in/tn-95/'
+      },
+      {
+        company: 'Komaki',
+        name: 'Komaki XGT-X1',
+        images: ['/images/komaki/x11.png', '/images/komaki/x12.png'],
+        price: '₹ 39,038-63,420',
+        batteryLife: '55-150 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '4 hrs',
+        variants: '5',
+        website: 'https://komaki.in/x-one/'
+      },
+      {
+        company: 'Kinetic Green',
+        name: 'E-LUNA',
+        images: ['/images/green/luna1.webp', '/images/green/luna2.webp'],
+        price: '₹ 72,990',
+        batteryLife: '90 km per charge',
+        topSpeed: '50 kmph',
+        chargingTime: '3 hrs',
+        variants: '3',
+        website: 'https://kineticgreen.com/product/e-luna'
+      },
+      {
+        company: 'Kinetic Green',
+        name: 'E-Zulu',
+        images: ['/images/green/zulu1.webp', '/images/green/zulu2.webp'],
+        price: '₹ 85,490',
+        batteryLife: '104 km per charge',
+        topSpeed: '60 kmph',
+        chargingTime: '5 hrs',
+        variants: '1',
+        website: 'https://kineticgreen.com/product/e-zulu'
+      },
+      {
+        company: 'Kinetic Green',
+        name: 'Zoom',
+        images: ['/images/green/zoom1.webp', '/images/green/zoom2.webp'],
+        price: '₹ 81,776',
+        batteryLife: '100 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '4 hrs',
+        variants: '2',
+        website: 'https://kineticgreen.com/product/zoom'
+      },
+      {
+        company: 'Kinetic Green',
+        name: 'Flex',
+        images: ['/images/green/flex1.webp', '/images/green/flex2.webp'],
+        price: '₹ 1,11,874',
+        batteryLife: '120 km per charge',
+        topSpeed: '72 kmph',
+        chargingTime: '5 hrs',
+        variants: '1',
+        website: 'https://kineticgreen.com/product/flex'
+      },
+      {
+        company: 'Kinetic Green',
+        name: 'Zing',
+        images: ['/images/green/zing1.webp', '/images/green/zing2.webp'],
+        price: '₹ 82,990',
+        batteryLife: '100 km per charge',
+        topSpeed: '25 kmph',
+        chargingTime: '3 hrs',
+        variants: '2',
+        website: 'https://kineticgreen.com/product/zing'
+      }
+  ];
+  
+  export default ScooterData;
+  

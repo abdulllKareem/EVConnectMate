@@ -1,0 +1,69 @@
+/* Styles for the Three Wheeler component */
+
+/* Container styling */
+.three-wheeler-container {
+  max-width: 75rem; /* 1200px -> 75rem */
+  margin: 0 auto;
+  padding: 1.25rem; /* 20px -> 1.25rem */
+}
+
+/* Search bar styling */
+.search-bar {
+  display: block;
+  width: 100%;
+  max-width: 25rem; /* 400px -> 25rem */
+  padding: 0.625rem; /* 10px -> 0.625rem */
+  margin: 1.25rem auto; /* 20px -> 1.25rem */
+  font-size: 1rem; /* 16px -> 1rem */
+  border: 1px solid #ccc;
+  border-radius: 0.25rem; /* 4px -> 0.25rem */
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 2px 5px -> 0.125rem 0.3125rem */
+}
+
+/* Card container styling */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem; /* 20px -> 1.25rem */
+  justify-content: center;
+}
+
+/* Individual card styling */
+.card {
+  width: 18.125rem; /* 290px -> 18.125rem */
+  padding: 0.625rem; /* 10px -> 0.625rem */
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem; /* 8px -> 0.5rem */
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1); /* 2px 8px -> 0.125rem 0.5rem */
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.3125rem); /* 5px -> 0.3125rem */
+}
+
+/* Card image styling */
+.card img {
+  width: 100%;
+  height: 15.625rem; /* 250px -> 15.625rem */
+  border-radius: 0.25rem; /* 4px -> 0.25rem */
+  margin-bottom: 0.625rem; /* 10px -> 0.625rem */
+}
+
+/* Company heading styling */
+.company-heading {
+  font-size: 1.5rem;
+  margin-top: 2.5rem; /* 40px -> 2.5rem */
+  margin-bottom: 0.625rem; /* 10px -> 0.625rem */
+  color: #333;
+  text-align: center;
+}
+
+/* Divider styling */
+.company-divider {
+  margin: 1.25rem 0; /* 20px -> 1.25rem */
+  border: 0;
+  height: 0.0625rem; /* 1px -> 0.0625rem */
+  background-color: #ddd;
+}

@@ -1,0 +1,103 @@
+.vehicle-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem; /* 20px -> 1.25rem */
+  max-width: 43.75rem; /* 700px -> 43.75rem */
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 0.625rem; /* 10px -> 0.625rem */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px -> 0.25rem 0.5rem */
+}
+
+.vehicle-detail h1 {
+  font-size: 3rem;
+  margin-bottom: 1.25rem; /* 20px -> 1.25rem */
+  text-align: center;
+  color: #333;
+}
+
+.vehicle-detail p {
+  font-size: 1.5rem;
+  margin: 0.9375rem 0; /* 15px -> 0.9375rem */
+  color: #555;
+}
+
+/* Darker color for fields like Name, Company, and Price */
+.vehicle-detail p.name,
+.vehicle-detail p.company {
+  color: #222;
+  font-weight: bold;
+}
+
+.vehicle-detail a {
+  margin-top: 1.25rem; /* 20px -> 1.25rem */
+  padding: 0.75rem 1.5rem; /* 12px 24px -> 0.75rem 1.5rem */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.3125rem; /* 5px -> 0.3125rem */
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.vehicle-detail a:hover {
+  background-color: #45a049;
+}
+
+.vehicle-images {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem; /* 20px -> 1.25rem */
+  margin-top: 1.25rem; /* 20px -> 1.25rem */
+}
+
+.vehicle-images img {
+  width: 37.5rem; /* 600px -> 37.5rem */
+  height: 34.375rem; /* 550px -> 34.375rem */
+  border-radius: 0.625rem; /* 10px -> 0.625rem */
+  object-fit: cover;
+  border: 0.3125rem solid #ddd; /* 5px -> 0.3125rem */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px -> 0.25rem 0.5rem */
+}
+
+.vehicle-images img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 48rem) { /* 768px -> 48rem */
+  .vehicle-detail h1 {
+    font-size: 2.5rem;
+  }
+
+  .vehicle-detail p {
+    font-size: 1.2rem;
+  }
+
+  .vehicle-detail a {
+    font-size: 1rem;
+    padding: 0.625rem 1.125rem; /* 10px 18px -> 0.625rem 1.125rem */
+  }
+
+  .vehicle-images img {
+    width: 15.625rem; /* 250px -> 15.625rem */
+    height: 12.5rem; /* 200px -> 12.5rem */
+    border-radius: 0.5rem; /* 8px -> 0.5rem */
+    border: 0.25rem solid #ddd; /* 4px -> 0.25rem */
+  }
+}
+
+/* Apply darker color and bold styling only to the labels */
+.vehicle-detail .dark-field {
+  color: #222;
+  font-weight: bold;
+}
+
+/* Ensure the values are styled normally */
+.vehicle-detail p {
+  font-size: 1.5rem;
+  margin: 0.9375rem 0;
+  color: #555;
+}
