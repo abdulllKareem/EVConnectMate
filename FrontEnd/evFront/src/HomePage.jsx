@@ -40,9 +40,11 @@ function HomePage() {
             setViewport({ latitude, longitude, zoom: 11 });
 
             // Fetch charging station data from backend
-            const response = await axios.get(`http://localhost:8080/api/stations`, {
+            const apiUrl = import.meta.env.VITE_API_URL;
+
+            const response = await axios.get(`${apiUrl}/api/stations`, {
                 params: { lat: latitude, long: longitude },
-            });
+                });
             setStations(response.data.stations || []); // Ensure fallback to empty array
         } catch (err) {
             console.error("Error fetching data:", err);
