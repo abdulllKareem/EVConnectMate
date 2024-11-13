@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReactMapGL, { NavigationControl } from 'react-map-gl';
 import mapboxgl from 'mapbox-gl';
@@ -10,9 +10,6 @@ mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
 const Direction = () => {
     const location = useLocation();
-    useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to the top of the page
-    }, []);
     const params = new URLSearchParams(location.search);
     const destination = params.get('destination');
     const [pickup, setPickup] = useState(null);
