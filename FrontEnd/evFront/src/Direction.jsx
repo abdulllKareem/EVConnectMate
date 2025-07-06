@@ -12,13 +12,16 @@ const Direction = () => {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     const destination = params.get('destination');
+
     const [pickup, setPickup] = useState(null);
     const [pickupName, setPickupName] = useState("");
     const [destinationName, setDestinationName] = useState("");
     const [error, setError] = useState(null);
+
     const mapRef = useRef(null);
     const directionsRef = useRef(null);
 
+    // Get live location using browser geolocation
     const getLiveLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -28,9 +31,9 @@ const Direction = () => {
                     setPickup(coords);
                     fetchPlaceName(coords, setPickupName);
                 },
-                (error) => {
-                    console.warn("Location access denied by user", error);
-                    setError("Location access denied. Please enable location.");
+                (err) => {
+                    console.warn("Location access denied by user", err);
+                    setError("Location access denied. Please enable location in your browser.");
                 },
                 { enableHighAccuracy: true, maximumAge: 0, timeout: 10000 }
             );
@@ -39,22 +42,25 @@ const Direction = () => {
         }
     };
 
+    // Get place name from Mapbox Geocoding API
     const fetchPlaceName = (coords, setName) => {
         const [lng, lat] = coords;
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${mapboxgl.accessToken}`)
-            .then(response => response.json())
+            .then(res => res.json())
             .then(data => {
-                if (data.features && data.features.length > 0) {
+                if (data.features?.length > 0) {
                     setName(data.features[0].place_name);
                 }
             })
             .catch(() => setError("Failed to retrieve place name."));
     };
 
+    // Get live location on component mount
     useEffect(() => {
         getLiveLocation();
     }, []);
 
+    // Initialize map directions when pickup & destination are ready
     useEffect(() => {
         if (!mapRef.current || !destination) return;
 
@@ -73,6 +79,7 @@ const Direction = () => {
         const directions = directionsRef.current;
         const [destLat, destLng] = destination.split(',').map(Number);
         const destCoords = [destLng, destLat];
+
         directions.setDestination(destCoords);
         fetchPlaceName(destCoords, setDestinationName);
 
@@ -88,18 +95,17 @@ const Direction = () => {
         };
     }, [pickup, destination]);
 
-    const handleUseLiveLocation = () => {
-        getLiveLocation();
-    };
-
     return (
         <div style={{ paddingTop: '40px' }}>
             <h1>Navigate to Station</h1>
+
             {pickupName && <p><strong>Your Location:</strong> {pickupName}</p>}
             {destinationName && <p><strong>Destination:</strong> {destinationName}</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
-            <button onClick={handleUseLiveLocation} style={{ marginBottom: '10px' }}>Use My Live Location</button>
+            <button onClick={getLiveLocation} style={{ marginBottom: '10px' }}>
+                Use My Live Location
+            </button>
 
             <ReactMapGL
                 ref={mapRef}
