@@ -30,7 +30,7 @@ function Home() {
           <Link to="/map" className="feature-link">View Map</Link>
         </div>
       </div>
-      <div class="tagline">
+      <div className="tagline">
             Drive the Future
         </div>
     </div>
